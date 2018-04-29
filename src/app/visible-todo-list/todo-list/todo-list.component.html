@@ -1,0 +1,11 @@
+<!-- <Todo
+        key={todo.id}
+        {...todo}
+        onClick={() => onTodoClick(todo.id)}
+      />
+  -->
+<ul>
+  <ng-container *ngFor="let todo of todos; let i = index">
+    <app-todo [completed]="todo.completed" [text]="todo.text" (todoClick)="todoClick.emit(todo.id)"></app-todo>
+  </ng-container>
+</ul>

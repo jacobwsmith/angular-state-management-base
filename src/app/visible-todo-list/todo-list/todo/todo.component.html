@@ -1,0 +1,5 @@
+<li (click)="todoClick.emit()"
+  [ngStyle]="{'textDecoration': completed ? 'line-through' : 'none'}"
+>
+  {{text}}
+</li>
